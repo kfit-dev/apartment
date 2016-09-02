@@ -33,6 +33,8 @@ module Apartment
           elsif config[:adapter] =~ /postgresql/
             adapter_method = 'jdbc_postgresql_adapter'
           end
+        elsif config[:adapter] == 'postgresql_makara'
+          adapter_method = 'postgresql_adapter'
         end
 
         begin
